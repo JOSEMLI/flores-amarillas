@@ -54,10 +54,10 @@ body {
   background: #fce700;
   bottom: 50px;
   font-family: "Poppins", sans-serif;
-  font-size: 40px;
+  font-size: 30px;
   font-style: normal;
   font-weight: 800;
-  height: 60px;
+  height: 50px;
   line-height: 1;
   padding: 10px;
   position: absolute;
@@ -65,6 +65,75 @@ body {
   animation: fadeIn 1s forwards;
   animation-delay: 2s; /* El elemento aparecerá después de 60 segundos */
 }
+
+ /* Mensajes personalizados secuenciales */
+        .messageadicional {
+          background: linear-gradient(135deg, rgba(252, 231, 0, 0.3), rgba(255, 235, 59, 0.2));
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 235, 59, 0.2);
+          top: 10%;
+          left: 50%;
+          font-family: "Georgia", serif;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 600;
+          height: auto;
+          line-height: 1.2;
+          padding: 20px 30px;
+          position: absolute;
+          opacity: 0;
+          border-radius: 20px;
+          box-shadow: 
+            0 4px 20px rgba(255, 235, 59, 0.1),
+            0 0 30px rgba(255, 235, 59, 0.05);
+          color: rgba(255, 245, 157, 0.95);
+          text-align: center;
+          transform: translateX(-50%);
+          letter-spacing: 1px;
+          text-shadow: 
+            0 0 10px rgba(255, 245, 157, 0.3),
+            0 0 20px rgba(255, 245, 157, 0.2);
+        }
+
+
+        .messageadicional-1 {
+          animation: fadeInOut 4s forwards;
+          animation-delay: 3s;
+        }
+
+        .messageadicional-2 {
+          animation: fadeIn 2s forwards;
+          animation-delay: 7s;
+        }
+        @keyframes fadeInOut {
+          0% {
+            opacity: 0;
+            transform: translateX(-50%) translateY(20px) scale(0.9);
+          }
+          20% {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0) scale(1);
+          }
+          80% {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0) scale(1);
+          }
+          100% {
+            opacity: 0;
+            transform: translateX(-50%) translateY(-20px) scale(0.9);
+          }
+        }
+
+        @keyframes fadeIn {
+          0% {
+            opacity: 0;
+            transform: translateX(-50%) translateY(20px) scale(0.9);
+          }
+          100% {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0) scale(1);
+          }
+        }
 
 @keyframes fadeIn {
   to {
